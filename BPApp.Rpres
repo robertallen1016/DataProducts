@@ -1,0 +1,67 @@
+Blood Pressure Categorization Application
+===
+author: Robert Allen
+date: `r date()`
+
+High Blood Pressure in America
+===
+
+The Center for Disease Control and Prevention (CDC) http://www.cdc.gov/bloodpressure/facts.htm
+
+- About 70 million American adults (29%) have high blood pressure
+- Only about half (52%) of people with high blood pressure have their condition under contro
+- Nearly 1 of 3 American adults has prehypertension
+
+Statistics like these show that High Blood Pressure is a health issue that many physicians will see in their patients.
+
+<small>
+Source:  
+Nwankwo T, Yoon SS, Burt V, Gu Q. Hypertension among adults in the US: National Health and Nutrition Examination Survey, 2011-2012. NCHS Data Brief, No. 133. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services, 2013
+</small>
+
+Who is at Risk for High Blood Pressure
+===
+
+Overall men and women are equally likely to develop high blood pressure, but men under the age of 45 are more likeley than women of the same age.
+
+```{r, echo=FALSE}
+  table <- matrix(c(11.1, 6.8, 25.1, 19.0, 34.1, 32.7), ncol=2,byrow=TRUE)
+  colnames(table) <- c("Men %","Women %")
+  rownames(table) <- c('20-34', '35-44', 'All')
+  table
+```
+
+<small>
+Source:  
+Nwankwo T, Yoon SS, Burt V, Gu Q. Hypertension among adults in the US: National Health and Nutrition Examination Survey, 2011-2012. NCHS Data Brief, No. 133. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services, 2013
+</small>
+
+What Can High Blood Pressure Cause
+===
+High Blood Pressure increases the risk of developing dangerous health conditions.  
+- First Heart Attack: 70% of people of these people have high blood pressure.
+- First Stroke: 80% of people of these people have high blood pressure.
+- Chronic Heart Failure: 70% of people of these people have high blood pressure.
+- Kidney Disease
+
+<small>
+Source:  
+Mozzafarian D, Benjamin EJ, Go AS, et al. Heart Disease and Stroke Statistics-2015 Update: a report from the American Heart Association. Circulation. 2015;e29-322.
+</small>
+
+Detecting High Blood Pressure
+===
+With over half of Americans having high blood pressure, the need for indentifing and treating those with this condition becomes important in order to stop these conditions from developing.
+
+This application will take the patient's blood pressure, inputed by the healthcare provider and categorize the patient based on their risk level.
+```{r, echo=FALSE}
+  table2 <- matrix(c('< 120', 'and', '< 80', '120 - 139', 'or', '80 - 89', '140 - 159', 'or', '90 - 99', '160 - 179', 'or', '100 - 109', '> 179', 'or', '> 109'), ncol=3,byrow=TRUE)
+  colnames(table2) <- c("Systolic mm Hg", "", "Diastolic mm Hg")
+  rownames(table2) <- c('Normal', 'Pre', 'Stage 1', 'Stage 2', 'Crisis')
+  table2
+```
+
+<small>
+Source:  
+http://www.bystolic.com/HighBloodPressureFacts.aspx?guid=sem_bin_43700010073715837
+</small>
